@@ -1,14 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://bickh4csk1mt"]
+[gd_scene load_steps=5 format=3 uid="uid://bickh4csk1mt"]
 
 [ext_resource type="FontFile" uid="uid://b1gvdjxmodau0" path="res://Fonts/dpcomic.ttf" id="1_10ghy"]
+[ext_resource type="Texture2D" uid="uid://c7lesb3btmoy" path="res://Sprites/Plants/Bush/Idle/1.png" id="2_yylxd"]
+[ext_resource type="Script" path="res://Player.gd" id="3_t65qn"]
+[ext_resource type="Texture2D" uid="uid://duq1go4t8nqpf" path="res://Sprites/Main_Character/Movement/Idle/Down/0.png" id="4_cxirg"]
 
 [node name="Level_Test" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
-offset_left = 493.0
-offset_top = 277.0
-offset_right = 803.0
-offset_bottom = 364.0
+offset_left = 120.0
+offset_top = 11.0
+offset_right = 212.0
+offset_bottom = 33.0
 theme_override_fonts/font = ExtResource("1_10ghy")
-theme_override_font_sizes/font_size = 90
-text = "Level - 1"
+theme_override_font_sizes/font_size = 20
+text = "Level - Test"
+
+[node name="Bush" type="Sprite2D" parent="."]
+position = Vector2(58, 85)
+texture = ExtResource("2_yylxd")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(214, 108)
+script = ExtResource("3_t65qn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("4_cxirg")
+hframes = 2
