@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://g6u80wwa86er"]
 
-[ext_resource type="FontFile" uid="uid://b1gvdjxmodau0" path="res://Fonts/dpcomic.ttf" id="1_dye13"]
+[ext_resource type="FontFile" uid="uid://cuqfj32a81wqd" path="res://Fonts/dpcomic.ttf" id="1_dye13"]
 [ext_resource type="Script" path="res://Menu.gd" id="1_irfd0"]
-[ext_resource type="Texture2D" uid="uid://dpehin740ykgy" path="res://Buttons/normal.png" id="2_xa0es"]
-[ext_resource type="Texture2D" uid="uid://bs3e5jx52tv8r" path="res://Buttons/hover.png" id="3_nrsdm"]
-[ext_resource type="Texture2D" uid="uid://b2871ikabmula" path="res://Buttons/pressed.png" id="4_l2adn"]
-[ext_resource type="Texture2D" uid="uid://crrxx8hmxw348" path="res://Buttons/Disabled.png" id="5_qfr3p"]
+[ext_resource type="Texture2D" uid="uid://d2urp5phnijja" path="res://Buttons/normal.png" id="2_xa0es"]
+[ext_resource type="Texture2D" uid="uid://d3xippbptua7p" path="res://Buttons/hover.png" id="3_nrsdm"]
+[ext_resource type="Texture2D" uid="uid://bvl3vcmacp8u2" path="res://Buttons/pressed.png" id="4_l2adn"]
+[ext_resource type="Texture2D" uid="uid://dthi3dgqhdant" path="res://Buttons/Disabled.png" id="5_qfr3p"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4s73t"]
 texture = ExtResource("2_xa0es")
