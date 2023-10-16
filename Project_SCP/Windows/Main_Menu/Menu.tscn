@@ -1,23 +1,23 @@
 [gd_scene load_steps=12 format=3 uid="uid://g6u80wwa86er"]
 
-[ext_resource type="FontFile" uid="uid://cuqfj32a81wqd" path="res://Fonts/dpcomic.ttf" id="1_dye13"]
-[ext_resource type="Script" path="res://Menu.gd" id="1_irfd0"]
-[ext_resource type="Texture2D" uid="uid://d2urp5phnijja" path="res://Buttons/normal.png" id="2_xa0es"]
-[ext_resource type="Texture2D" uid="uid://d3xippbptua7p" path="res://Buttons/hover.png" id="3_nrsdm"]
-[ext_resource type="Texture2D" uid="uid://bvl3vcmacp8u2" path="res://Buttons/pressed.png" id="4_l2adn"]
-[ext_resource type="Texture2D" uid="uid://dthi3dgqhdant" path="res://Buttons/Disabled.png" id="5_qfr3p"]
+[ext_resource type="Script" path="res://Windows/Main_Menu/Menu.gd" id="1_ft18k"]
+[ext_resource type="FontFile" uid="uid://b1gvdjxmodau0" path="res://Fonts/dpcomic.ttf" id="2_rurva"]
+[ext_resource type="Texture2D" uid="uid://dpehin740ykgy" path="res://Buttons/normal.png" id="3_k1cuh"]
+[ext_resource type="Texture2D" uid="uid://bs3e5jx52tv8r" path="res://Buttons/hover.png" id="4_7d4mh"]
+[ext_resource type="Texture2D" uid="uid://b2871ikabmula" path="res://Buttons/pressed.png" id="5_yoix6"]
+[ext_resource type="Texture2D" uid="uid://crrxx8hmxw348" path="res://Buttons/Disabled.png" id="6_1t5oh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4s73t"]
-texture = ExtResource("2_xa0es")
+texture = ExtResource("3_k1cuh")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lr208"]
-texture = ExtResource("3_nrsdm")
+texture = ExtResource("4_7d4mh")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0foq"]
-texture = ExtResource("4_l2adn")
+texture = ExtResource("5_yoix6")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xpyxh"]
-texture = ExtResource("5_qfr3p")
+texture = ExtResource("6_1t5oh")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e7lsa"]
 
@@ -29,7 +29,7 @@ offset_right = -30.8
 offset_bottom = -30.825
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_irfd0")
+script = ExtResource("1_ft18k")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -40,7 +40,7 @@ offset_bottom = 187.0
 theme_override_colors/font_pressed_color = Color(0.482353, 0.662745, 0.690196, 1)
 theme_override_colors/font_hover_color = Color(0.666667, 0.494118, 0.490196, 1)
 theme_override_colors/font_disabled_color = Color(0.305882, 0.305882, 0.305882, 1)
-theme_override_fonts/font = ExtResource("1_dye13")
+theme_override_fonts/font = ExtResource("2_rurva")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_4s73t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lr208")
@@ -59,7 +59,7 @@ mouse_default_cursor_shape = 2
 theme_override_colors/font_pressed_color = Color(0.482353, 0.662745, 0.690196, 1)
 theme_override_colors/font_hover_color = Color(0.666667, 0.494118, 0.490196, 1)
 theme_override_colors/font_disabled_color = Color(0.482353, 0.482353, 0.482353, 1)
-theme_override_fonts/font = ExtResource("1_dye13")
+theme_override_fonts/font = ExtResource("2_rurva")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_4s73t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lr208")
@@ -79,7 +79,7 @@ mouse_default_cursor_shape = 2
 theme_override_colors/font_pressed_color = Color(0.482353, 0.662745, 0.690196, 1)
 theme_override_colors/font_hover_color = Color(0.666667, 0.494118, 0.490196, 1)
 theme_override_colors/font_disabled_color = Color(0.305882, 0.305882, 0.305882, 1)
-theme_override_fonts/font = ExtResource("1_dye13")
+theme_override_fonts/font = ExtResource("2_rurva")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_4s73t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lr208")

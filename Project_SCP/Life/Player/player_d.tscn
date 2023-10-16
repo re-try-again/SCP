@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c823558tcnqq4"]
+
+[ext_resource type="Script" path="res://Life/Player/Player.gd" id="1_iir7b"]
+[ext_resource type="Texture2D" uid="uid://duq1go4t8nqpf" path="res://Sprites/Main_Character/Movement/Idle/Down/0.png" id="2_gdsa1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jg1t0"]
+radius = 3.61012
+height = 8.66426
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_iir7b")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gdsa1")
+hframes = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+rotation = 1.5708
+scale = Vector2(1.385, 1.385)
+shape = SubResource("CapsuleShape2D_jg1t0")

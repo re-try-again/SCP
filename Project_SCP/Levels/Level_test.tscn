@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bickh4csk1mt"]
+
+[ext_resource type="FontFile" uid="uid://b1gvdjxmodau0" path="res://Fonts/dpcomic.ttf" id="1_sifkq"]
+[ext_resource type="PackedScene" uid="uid://c823558tcnqq4" path="res://Life/Player/player_d.tscn" id="2_vb5yv"]
+
+[node name="Level_Test" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 120.0
+offset_top = 11.0
+offset_right = 212.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("1_sifkq")
+theme_override_font_sizes/font_size = 20
+text = "Level - Test"
+
+[node name="Player" parent="." instance=ExtResource("2_vb5yv")]
+position = Vector2(184, 88)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(200, 152)
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-224, -184)
+polygon = PackedVector2Array(98, 144, 174, 183, 240, 166, 314, 123, 284, 68, 336, 72, 336, 192, 96, 192)
