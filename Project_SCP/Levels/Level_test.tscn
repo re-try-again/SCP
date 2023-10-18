@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://xtgtyepa8h53" path="res://Life/Plants/Bush/bush.tscn" id="3_vijg2"]
 
 [node name="Level_Test" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Label" type="Label" parent="."]
 offset_left = 120.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c823558tcnqq4"]
+[gd_scene load_steps=7 format=3 uid="uid://c823558tcnqq4"]
 
 [ext_resource type="Script" path="res://Life/Player/Player.gd" id="1_iir7b"]
 [ext_resource type="Texture2D" uid="uid://duq1go4t8nqpf" path="res://Sprites/Main_Character/Movement/Idle/Down/0.png" id="2_gdsa1"]
@@ -7,7 +7,28 @@
 radius = 3.61012
 height = 8.66426
 
+[sub_resource type="Animation" id="Animation_h4157"]
+resource_name = "Idle_Down"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cxq4a"]
+_data = {
+"Idle_Down": SubResource("Animation_h4157")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdlco"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gdsa1")
+}],
+"loop": true,
+"name": &"Idle_down",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(0, -11)
 script = ExtResource("1_iir7b")
 metadata/_edit_group_ = true
 
@@ -23,3 +44,12 @@ position = Vector2(0, 12)
 rotation = 1.5708
 scale = Vector2(1.385, 1.385)
 shape = SubResource("CapsuleShape2D_jg1t0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cxq4a")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xdlco")
+animation = &"Idle_down"

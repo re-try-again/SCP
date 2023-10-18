@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://xtgtyepa8h53"]
+[gd_scene load_steps=7 format=3 uid="uid://xtgtyepa8h53"]
 
 [ext_resource type="Script" path="res://Life/Plants/Bush/Bush.gd" id="1_ipdaa"]
 [ext_resource type="Texture2D" uid="uid://dp7gsnodqtode" path="res://Sprites/Plants/Bush/Idle/0.png" id="2_xsufb"]
@@ -42,9 +42,14 @@ _data = {
 "RESET": SubResource("Animation_pqdqd")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r4lao"]
+radius = 5.50459
+height = 65.8824
+
 [node name="Bush" type="StaticBody2D"]
+y_sort_enabled = true
+position = Vector2(0, -4)
 script = ExtResource("1_ipdaa")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
@@ -55,3 +60,10 @@ hframes = 4
 libraries = {
 "": SubResource("AnimationLibrary_dihgh")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+rotation = 1.5708
+scale = Vector2(0.425, 0.425)
+shape = SubResource("CapsuleShape2D_r4lao")
+disabled = true
