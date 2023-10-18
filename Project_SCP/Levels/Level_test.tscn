@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bickh4csk1mt"]
+[gd_scene load_steps=4 format=3 uid="uid://bickh4csk1mt"]
 
 [ext_resource type="FontFile" uid="uid://b1gvdjxmodau0" path="res://Fonts/dpcomic.ttf" id="1_sifkq"]
 [ext_resource type="PackedScene" uid="uid://c823558tcnqq4" path="res://Life/Player/player_d.tscn" id="2_vb5yv"]
+[ext_resource type="PackedScene" uid="uid://xtgtyepa8h53" path="res://Life/Plants/Bush/bush.tscn" id="3_vijg2"]
 
 [node name="Level_Test" type="Node2D"]
 
@@ -16,6 +17,7 @@ text = "Level - Test"
 
 [node name="Player" parent="." instance=ExtResource("2_vb5yv")]
 position = Vector2(184, 88)
+floor_max_angle = 0.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(200, 152)
@@ -24,3 +26,6 @@ metadata/_edit_group_ = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-224, -184)
 polygon = PackedVector2Array(98, 144, 174, 183, 240, 166, 314, 123, 284, 68, 336, 72, 336, 192, 96, 192)
+
+[node name="Bush" parent="." instance=ExtResource("3_vijg2")]
+position = Vector2(48, 40)
