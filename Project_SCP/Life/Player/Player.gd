@@ -1,10 +1,14 @@
 extends CharacterBody2D
 
 var ACCELERATION = 300
-var MAX_SPEED = 75
+var MAX_SPEED = 60
 var FRICTION = 350
 
 var input_vector = Vector2(0,0)
+
+@onready var animationPlayer = $AnimatedSprite2D/AnimationPlayer
+@onready var animationTree = $AnimationTree
+@onready var animationState = animationTree.get("parameters/playback")
 
 func _physics_process(delta):
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -17,9 +21,9 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
 	if velocity == Vector2.ZERO:
-		$AnimationTree.get("parameters/playback").travel("Idle")
+		animationState.travel("Idle")
 	else:
-		$AnimationTree.get("parameters/playback").travel("Walk")
-		$AnimationTree.set("parameters/Idle/blend_position", velocity)
-		$AnimationTree.set("parameters/Walk/blend_position", velocity)
+		animationState.travel("Walk")
+		animationTree.set("parameters/Idle/blend_position", velocity)
+		animationTree.set("parameters/Walk/blend_position", velocity)
 		move_and_slide()
